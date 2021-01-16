@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
 
 export default class ContactEditor extends Component {
   state = {
@@ -51,3 +52,8 @@ export default class ContactEditor extends Component {
     );
   }
 }
+ContactEditor.propTypes = {
+  onAddContact: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+};
